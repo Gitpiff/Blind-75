@@ -15,10 +15,26 @@
 //Words can be of any length
 
 function wordle(secretWord, guessedWord) {
-    const secretWordArray = secretWord.split("")
-    const guessedWordArray = guessedWord.split("")
+    //const secretWordArray = secretWord.split("")
+    // const guessedWordArray = guessedWord.split("")
 
-    return secretWordArray + guessedWordArray
+    // return secretWordArray + guessedWordArray
+
+    const result = [];
+
+    for (let i = 0; i < guessedWord.length; i ++) {
+        if (guessedWord[i] === secretWord[i] && guessedWord.indexOf([i]) === secretWord.indexOf([i])) {
+            result.push("G");
+        } else if (!secretWord.includes(guessedWord[i])) {
+            result.push("R");
+        } else {
+            result.push("Y");
+        }
+
+        //guessedWord += 1;
+    }
+
+    return result;
 
 }
 
