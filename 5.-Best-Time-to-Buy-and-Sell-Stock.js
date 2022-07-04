@@ -5,7 +5,9 @@
 // Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
 
 const maxProfit = (prices) => {
-
+    //two pointers, one for when we buy, one for when we sell
+    let buy = 0;
+    let sell = 0;
 }
 
 console.log(maxProfit([7,1,5,3,6,4]))
